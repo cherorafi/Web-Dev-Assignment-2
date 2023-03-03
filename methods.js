@@ -30,3 +30,20 @@ Array.prototype.myFilter = function (func)
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 console.log(words.myFilter(word => word.length > 6));
 */
+
+// 3. some()
+Array.prototype.mySome = function (func) 
+{
+    var length = this.length
+    for (let i = 0; i < length; i++) {
+        if (func(this[i], i, this))
+            return true;
+    }
+    return false;
+};
+
+/* // For testing function 3
+const array = [1, 2, 3, 4, 5];
+const even = (element) => element % 2 === 0;
+console.log(array.mySome(even));
+*/
