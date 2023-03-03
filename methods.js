@@ -47,3 +47,20 @@ const array = [1, 2, 3, 4, 5];
 const even = (element) => element % 2 === 0;
 console.log(array.mySome(even));
 */
+
+// 4. every()
+Array.prototype.myEvery = function (func) 
+{
+    var length = this.length
+    for (let i = 0; i < length; i++) {
+        if ((func(this[i], i, this)) == false)
+            return false;
+    }
+    return true;
+};
+
+/* // For testing function 4
+const isBelowThreshold = (currentValue) => currentValue < 40;
+const array1 = [1, 30, 39, 29, 10, 13];
+console.log(array1.myEvery(isBelowThreshold));
+*/
