@@ -109,5 +109,34 @@ console.log(pets.includes('cat'));
 console.log(pets.includes('at'));
 */
 
+// 6. includes()
+Array.prototype.myIncludes = function (word) {
+    var length = this.length
+    for (let i = 0; i < length; i++) {
+        if (this[i] == word)
+            return true;
+    }
+    return false;
+};
+
+// 7. myIncludes()
+Array.prototype.myIncludes = function (word, index) {
+    if (index == undefined)
+        index = 0
+    var length = this.length
+    for (let i = index; i < length; i++) {
+        if (this[i] == word)
+            return i;
+    }
+    return -1;
+};
+
+/* // For testing function 7
+const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
+console.log(animals.lastIndexOf('Dodo'));
+console.log(animals.lastIndexOf('Tiger'));
+*/
+
+
 
 
