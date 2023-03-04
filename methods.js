@@ -167,3 +167,21 @@ const object1 = {
 };
 console.log(Object.myKeys(object1));
 */
+
+Object.myValues = function (map) 
+{
+    var values=[]; 
+    for(let x in map){
+      values.push(map[x]); 
+    }
+    return values; 
+};
+
+/* For testing function 10
+const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+};
+console.log(Object.myValues(object1));
+*/
