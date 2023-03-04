@@ -9,11 +9,6 @@ Array.prototype.myMap = function (func)
     return newList;
 };
 
-/* // For testing function 1
-const array1 = [1, 4, 9, 16];
-console.log(array1.myMap(x => x * 2));
-*/
-
 // 2. filter()
 Array.prototype.myFilter = function (func) 
 {
@@ -26,11 +21,6 @@ Array.prototype.myFilter = function (func)
     return newList;
 };
 
-/* // For testing function 2
-const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
-console.log(words.myFilter(word => word.length > 6));
-*/
-
 // 3. some()
 Array.prototype.mySome = function (func) 
 {
@@ -42,12 +32,6 @@ Array.prototype.mySome = function (func)
     return false;
 };
 
-/* // For testing function 3
-const array = [1, 2, 3, 4, 5];
-const even = (element) => element % 2 === 0;
-console.log(array.mySome(even));
-*/
-
 // 4. every()
 Array.prototype.myEvery = function (func) 
 {
@@ -58,12 +42,6 @@ Array.prototype.myEvery = function (func)
     }
     return true;
 };
-
-/* // For testing function 4
-const isBelowThreshold = (currentValue) => currentValue < 40;
-const array1 = [1, 30, 39, 29, 10, 13];
-console.log(array1.myEvery(isBelowThreshold));
-*/
 
 // 5. reduce()
 Array.prototype.myReduce = function (func, initialValue) 
@@ -81,16 +59,7 @@ Array.prototype.myReduce = function (func, initialValue)
     }
   
     return initialValue;
-  };
-  
-/* // For testing function 5
-const array1 = [1, 2, 3, 4];
-const initialValue = 1;
-const sumWithInitial = array1.myReduce(
-  (accumulator, currentValue) => accumulator + currentValue, initialValue
-);
-console.log(sumWithInitial);
-*/
+ };
 
 // 6. includes()
 Array.prototype.myIncludes = function (word) 
@@ -102,15 +71,6 @@ Array.prototype.myIncludes = function (word)
     }
     return false;
 };
-
-/* // For testing function 6
-const array1 = [1, 2, 3];
-console.log(array1.myIncludes(2));
-const pets = ['cat', 'dog', 'bat'];
-console.log(pets.myIncludes('cat'));
-console.log(pets.myIncludes('at'));
-*/
-
 
 // 7. indexOf()
 Array.prototype.myIndexOf = function (word, index) 
@@ -125,13 +85,6 @@ Array.prototype.myIndexOf = function (word, index)
     return -1;
 };
 
-/* //For testing function 7
-const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
-console.log(beasts.myIndexOf('bison'));
-console.log(beasts.myIndexOf('bison', 2));
-console.log(beasts.myIndexOf('giraffe'));
-*/
-
 // 8. lastIndexOf()
 Array.prototype.myLastIndexOf = function (word) 
 {
@@ -144,12 +97,6 @@ Array.prototype.myLastIndexOf = function (word)
     return index;
 };
 
-/* // For testing function 8
-const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
-console.log(animals.myLastIndexOf('Dodo'));
-console.log(animals.myLastIndexOf('Tiger'));
-*/
-
 Object.myKeys = function (map) 
 {
     var keys=[]; 
@@ -159,15 +106,6 @@ Object.myKeys = function (map)
     return keys; 
 };
 
-/* // For testing function 9
-const object1 = {
-    a: 'somestring',
-    b: 42,
-    c: false
-};
-console.log(Object.myKeys(object1));
-*/
-
 Object.myValues = function (map) 
 {
     var values=[]; 
@@ -176,12 +114,3 @@ Object.myValues = function (map)
     }
     return values; 
 };
-
-/* For testing function 10
-const object1 = {
-    a: 'somestring',
-    b: 42,
-    c: false
-};
-console.log(Object.myValues(object1));
-*/
