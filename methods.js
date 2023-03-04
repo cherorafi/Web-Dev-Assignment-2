@@ -66,7 +66,8 @@ console.log(array1.myEvery(isBelowThreshold));
 */
 
 // 5. reduce()
-Array.prototype.myReduce = function (func, initialValue) {
+Array.prototype.myReduce = function (func, initialValue) 
+{
     var index = 0
     if (initialValue == undefined){
         index = 1
@@ -92,7 +93,8 @@ console.log(sumWithInitial);
 */
 
 // 6. includes()
-Array.prototype.myIncludes = function (word) {
+Array.prototype.myIncludes = function (word) 
+{
     var length = this.length
     for (let i = 0; i < length; i++) {
         if (this[i] == word)
@@ -111,7 +113,8 @@ console.log(pets.myIncludes('at'));
 
 
 // 7. indexOf()
-Array.prototype.myIndexOf = function (word, index) {
+Array.prototype.myIndexOf = function (word, index) 
+{
     if (index == undefined)
         index = 0
     var length = this.length
@@ -122,15 +125,16 @@ Array.prototype.myIndexOf = function (word, index) {
     return -1;
 };
 
-/* For testing function 7
+/* //For testing function 7
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
-console.log(beasts.indexOf('bison'));
-console.log(beasts.indexOf('bison', 2));
-console.log(beasts.indexOf('giraffe'));
+console.log(beasts.myIndexOf('bison'));
+console.log(beasts.myIndexOf('bison', 2));
+console.log(beasts.myIndexOf('giraffe'));
 */
 
 // 8. lastIndexOf()
-Array.prototype.myLastIndexOf = function (word) {
+Array.prototype.myLastIndexOf = function (word) 
+{
     var index = -1
     var length = this.length
     for (let i = 0; i < length; i++) {
@@ -142,10 +146,24 @@ Array.prototype.myLastIndexOf = function (word) {
 
 /* // For testing function 8
 const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
-console.log(animals.lastIndexOf('Dodo'));
-console.log(animals.lastIndexOf('Tiger'));
+console.log(animals.myLastIndexOf('Dodo'));
+console.log(animals.myLastIndexOf('Tiger'));
 */
 
+Object.myKeys = function (map) 
+{
+    var keys=[]; 
+    for(let x in map){
+      keys.push(x); 
+    }
+    return keys; 
+};
 
-
-
+/* // For testing function 9
+const object1 = {
+    a: 'somestring',
+    b: 42,
+    c: false
+};
+console.log(Object.myKeys(object1));
+*/
