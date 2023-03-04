@@ -1,6 +1,6 @@
 # Web-Dev-Assignment-2
 
-## This assignment recreates 10 native javascript methods
+### This assignment recreates 10 native Javascript methods
 1. map() -> myMap()
 2. filter() -> myFilter()
 3. some() -> mySome()
