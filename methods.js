@@ -103,24 +103,15 @@ Array.prototype.myIncludes = function (word) {
 
 /* // For testing function 6
 const array1 = [1, 2, 3];
-console.log(array1.includes(2));
+console.log(array1.myIncludes(2));
 const pets = ['cat', 'dog', 'bat'];
-console.log(pets.includes('cat'));
-console.log(pets.includes('at'));
+console.log(pets.myIncludes('cat'));
+console.log(pets.myIncludes('at'));
 */
 
-// 6. includes()
-Array.prototype.myIncludes = function (word) {
-    var length = this.length
-    for (let i = 0; i < length; i++) {
-        if (this[i] == word)
-            return true;
-    }
-    return false;
-};
 
-// 7. myIncludes()
-Array.prototype.myIncludes = function (word, index) {
+// 7. indexOf()
+Array.prototype.myIndexOf = function (word, index) {
     if (index == undefined)
         index = 0
     var length = this.length
@@ -131,7 +122,25 @@ Array.prototype.myIncludes = function (word, index) {
     return -1;
 };
 
-/* // For testing function 7
+/* For testing function 7
+const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
+console.log(beasts.indexOf('bison'));
+console.log(beasts.indexOf('bison', 2));
+console.log(beasts.indexOf('giraffe'));
+*/
+
+// 8. lastIndexOf()
+Array.prototype.myLastIndexOf = function (word) {
+    var index = -1
+    var length = this.length
+    for (let i = 0; i < length; i++) {
+        if (this[i] == word)
+            index = i
+    }
+    return index;
+};
+
+/* // For testing function 8
 const animals = ['Dodo', 'Tiger', 'Penguin', 'Dodo'];
 console.log(animals.lastIndexOf('Dodo'));
 console.log(animals.lastIndexOf('Tiger'));
