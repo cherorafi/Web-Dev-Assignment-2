@@ -97,6 +97,7 @@ Array.prototype.myLastIndexOf = function (word)
     return index;
 };
 
+// 9. Object.keys()
 Object.myKeys = function (map) 
 {
     var keys=[]; 
@@ -106,6 +107,7 @@ Object.myKeys = function (map)
     return keys; 
 };
 
+// 10. Object.values()
 Object.myValues = function (map) 
 {
     var values=[]; 
