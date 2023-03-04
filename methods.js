@@ -91,3 +91,23 @@ const sumWithInitial = array1.myReduce(
 console.log(sumWithInitial);
 */
 
+// 6. includes()
+Array.prototype.myIncludes = function (word) {
+    var length = this.length
+    for (let i = 0; i < length; i++) {
+        if (this[i] == word)
+            return true;
+    }
+    return false;
+};
+
+/* // For testing function 6
+const array1 = [1, 2, 3];
+console.log(array1.includes(2));
+const pets = ['cat', 'dog', 'bat'];
+console.log(pets.includes('cat'));
+console.log(pets.includes('at'));
+*/
+
+
+
