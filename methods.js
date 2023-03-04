@@ -64,3 +64,30 @@ const isBelowThreshold = (currentValue) => currentValue < 40;
 const array1 = [1, 30, 39, 29, 10, 13];
 console.log(array1.myEvery(isBelowThreshold));
 */
+
+// 5. reduce()
+Array.prototype.myReduce = function (func, initialValue) {
+    var index = 0
+    if (initialValue == undefined){
+        index = 1
+        initialValue = this[0]
+    }
+
+    var length = this.length
+  
+    for (i = index; i < length; i++){
+      initialValue = func(initialValue, this[i], i, this);
+    }
+  
+    return initialValue;
+  };
+  
+/* // For testing function 5
+const array1 = [1, 2, 3, 4];
+const initialValue = 1;
+const sumWithInitial = array1.myReduce(
+  (accumulator, currentValue) => accumulator + currentValue, initialValue
+);
+console.log(sumWithInitial);
+*/
+
